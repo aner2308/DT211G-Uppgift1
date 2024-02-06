@@ -43,7 +43,35 @@
             skrivbordet som jag öppnade upp i kommandotolken och skrev sedan in; npm init. Det gav mig en JSON-fil med
             tillhörande struktur i min mapp. Jag öppnade mappen i Visual Studio Code och fortsatte arbetet där.
             <br><br>
-            
+            I Visual Studio Code byggde jag en mappstruktur likt det vi gjort i tidigare projekt. En mapp med
+            Javascript, en med CSS, och en med bilder. Dessa tre mappar, samt alla HTML-filer, hamnade i en gemensam
+            mapp med namn src. I terminalen för mitt projekt laddade jag ner och länkade också programmet parcel. Detta
+            gjordes genom att skriva in kommandot "npm install parcel --save-dev" i kommandotolken.
+            <br><br>
+            Parcel hjälper till att hantera och automatisera vissa processer. Det är exempelvis via parcel som mina
+            bilder behandlas och konverteras till olika format utan att jag själv behöver redigera dom. Parcel hjälper
+            också
+            till med att optimera min JavaScript-fil. Hade jag haft separata JavaScript-filer så hade dom också slagits
+            ihop för att spara plats. I min JSON-fil la jag in kortkommandon för parcel som jag kan använda från bland
+            annat kommandotolken. Ett kommando "start": "parcel", och ett kommando "build": "parcel build".
+            <br><br>
+            Mitt projekt är länkat till programmet GitHub. Jag kan skicka in mina uppdateringar i koden och
+            versionshantera mitt projekt till GitHub direkt från Visual Studio Code. Skulle något gå fel eller min dator
+            kraschar kan jag tanka ner mina versioner av projektet från GitHub utan att riskera att något försvunnit. En
+            sak att vara försiktig med i versionshanteringen är storleken på filerna. Eftersom jag laddat ner parcel så
+            fick jag hundratals filer på köpet som jag inte använder i mitt projekt. Det skulle vara väldigt onödigt att
+            versionshantera och ladda in alla dom filerna varje gång jag gör en liten ändring på min webbsida. Därför
+            skapade jag en .gitignore fil.
+            <br><br>
+            .gitignore är en fil där man kan lägga in titlarna på de filerna som man inte vill ska följa med i
+            uppladdningen till GitHub. I den filen la jag in mappen "node_modules" och mappen "dist".
+            <br><br>
+            Efter all struktur var klar så länkade jag min GitHub repository till Netlify för publicering på webben. Via
+            denna länk och lite inställningar så kommer alla mina commits till mitt GitHub repo automatiskt att
+            optimeras via parcel, och laddas upp direkt på webben. I Netlify kunde jag också byta namn på min webbplats
+            till något lite mer logiskt än en sifferkombination.
+            <br><br>
+            Och nu är vi här! Lite smartare, lite mer erfarna, och redo för nästa steg!
         </p>
     </div>
 
