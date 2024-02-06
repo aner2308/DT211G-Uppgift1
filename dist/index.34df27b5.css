@@ -1,3 +1,143 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 62.5%;
+}
 
+p {
+  font-size: 1.6em;
+}
+
+h1 {
+  font-size: 3.6em;
+}
+
+.topnav {
+  z-index: 1;
+  background-color: #333;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 1.8em;
+  text-decoration: none;
+  display: block;
+}
+
+.topnav a:hover {
+  color: #000;
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.topnav a.active {
+  color: #fff;
+  background-color: #333;
+}
+
+.icon {
+  display: none;
+}
+
+.sidenav {
+  z-index: 2;
+  background-color: #333;
+  width: 400px;
+  max-width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 5px #000;
+}
+
+.sidenav a {
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 1.8em;
+  text-decoration: none;
+  display: block;
+}
+
+.överskrift {
+  color: #f2f2f2;
+  text-align: center;
+  background-color: #333;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.row {
+  filter: grayscale();
+  flex-wrap: wrap;
+  padding: 0 4px;
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  max-width: 48%;
+  padding: 0 1%;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 8px;
+}
+
+footer {
+  background-color: #333;
+  width: 100vw;
+  min-height: 20vh;
+}
+
+footer p {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 30px 30px 0;
+}
+
+footer a {
+  color: #f2f2f2;
+  text-align: center;
+  cursor: pointer;
+  padding: 0 10px 10px;
+  font-size: 1.6em;
+  text-decoration: none;
+  display: block;
+}
+
+@media screen and (width <= 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .icon {
+    float: right;
+    color: #f2f2f2;
+    background-color: #333;
+    border-style: none;
+    padding: 10px 12px;
+    font-size: 2.2em;
+    display: block;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 98%;
+    padding: 0 1%;
+  }
+}
 
 /*# sourceMappingURL=index.34df27b5.css.map */
