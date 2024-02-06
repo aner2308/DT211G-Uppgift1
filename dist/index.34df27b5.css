@@ -6,6 +6,7 @@ body {
 
 p {
   font-size: 1.6em;
+  line-height: 1.6em;
 }
 
 h1 {
@@ -77,6 +78,12 @@ h1 {
   padding-bottom: 10px;
 }
 
+#container1 {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .row {
   filter: grayscale();
   flex-wrap: wrap;
@@ -96,6 +103,11 @@ h1 {
   margin-top: 8px;
 }
 
+ul {
+  font-size: 1.6em;
+  line-height: 1.6em;
+}
+
 footer {
   background-color: #333;
   width: 100vw;
@@ -106,6 +118,7 @@ footer p {
   color: #f2f2f2;
   text-align: center;
   padding: 30px 30px 0;
+  line-height: 1.6em;
 }
 
 footer a {
@@ -131,6 +144,31 @@ footer a {
     padding: 10px 12px;
     font-size: 2.2em;
     display: block;
+  }
+
+  .column {
+    flex: 100%;
+    max-width: 80%;
+    padding: 0 10%;
+  }
+
+  #container1 {
+    width: 80vw;
+    font-size: .8em;
+  }
+}
+
+@media screen and (width <= 400px) {
+  .överskrift {
+    font-size: 2.4em;
+  }
+
+  footer {
+    font-size: .8em;
+  }
+
+  .sidenav {
+    width: 100vw;
   }
 
   .column {
