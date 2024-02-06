@@ -126,6 +126,7 @@ footer a {
     padding-top: 0;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* Inställningar för när skärmbredden är mindre än 600px */
