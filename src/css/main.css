@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+/* Bakgrund till navigatinsfältet */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+}
+
+/* Styla länkarna i navigationsfältet */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+/* Byter utseende på länkarna när man håller musen över dom */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+}
+
+/* Gör att länken till den aktiva sidan har en annan bakgrund än resten */
+.topnav a.active {
+    background-color: #333;
+    color: white;
+}
+
+/* Döljer länken till den utfällbara menyn på stor skärmbredd */
+.icon {
+    display: none;
+}
+
+.sidenav {
+    background-color: #333;
+    position: absolute;
+    box-shadow: 0px 0px 5px #000000;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 400px;
+    max-width: 100vw;
+    display: none;
+}
+
+.sidenav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+
+/* Inställningar för när skärmbredden är mindre än 600px */
+@media screen and (max-width: 600px) {
+
+    /*Döljer alla länkar i menyn förutom den första*/
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    /*Sätter menyikonen som synlig och placerar den till höger*/
+    .icon {
+        float: right;
+        display: block;
+        border-style: none;
+        color: #f2f2f2;
+        background-color: #333;
+        font-size: 2.2em;
+        padding: 10px 12px;
+    }
+
+}
