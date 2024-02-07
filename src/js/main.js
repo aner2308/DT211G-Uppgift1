@@ -22,3 +22,19 @@ function toggleMenu() {
     }
 
 }
+
+//UPPGIFT 2!
+
+const url = ("../ramschema_ht23.json");
+window.onload = init();
+
+async function init(){
+    try {
+        const response = await fetch(url);
+        let kurser = await response.json();
+
+        console.table(kurser);
+    } catch {
+        document.getElementById("error").innerHTML = "<p>Något gick fel...</p>"
+    }
+}

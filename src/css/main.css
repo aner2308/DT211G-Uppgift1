@@ -149,7 +149,7 @@ footer a {
 }
 
 /* Inställningar för när skärmbredden är mindre än 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     /*Döljer alla länkar i menyn förutom den första*/
     .topnav a:not(:first-child) {
