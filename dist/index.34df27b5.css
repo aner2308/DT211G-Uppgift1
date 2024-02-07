@@ -84,6 +84,41 @@ h1 {
   margin-right: auto;
 }
 
+#container2 {
+  width: 80vw;
+  min-height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container3 {
+  background-color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  font-size: 1.4em;
+}
+
+thead td {
+  cursor: pointer;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+thead td:hover {
+  color: #000;
+}
+
+tr {
+  border-bottom: 1px solid #000;
+  font-size: 1.2em;
+}
+
 .row {
   filter: grayscale();
   flex-wrap: wrap;
@@ -108,9 +143,16 @@ ul {
   line-height: 1.6em;
 }
 
+#searchbar {
+  width: 100%;
+  height: 30px;
+  margin: 0 0 20px;
+  padding-left: 10px;
+  font-size: 1.6em;
+}
+
 footer {
   background-color: #333;
-  width: 100vw;
   min-height: 20vh;
 }
 
@@ -131,7 +173,7 @@ footer a {
   display: block;
 }
 
-@media screen and (width <= 600px) {
+@media screen and (width <= 650px) {
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -156,6 +198,14 @@ footer a {
     width: 80vw;
     font-size: .8em;
   }
+
+  #container2 {
+    width: 90vw;
+  }
+
+  thead td, tr {
+    font-size: 1em;
+  }
 }
 
 @media screen and (width <= 400px) {
@@ -175,6 +225,10 @@ footer a {
     flex: 100%;
     max-width: 98%;
     padding: 0 1%;
+  }
+
+  thead td, tr {
+    font-size: .8em;
   }
 }
 
