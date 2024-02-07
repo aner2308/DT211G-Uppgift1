@@ -595,7 +595,7 @@ function toggleMenu() {
     else mySidenavEl.style.display = "none";
 }
 //UPPGIFT 2!
-const url = "./ramschema_ht23.json";
+const url = "https://webbutveckling.miun.se/files/ramschema_ht23.json";
 window.onload = init();
 let kurser = [];
 const kurserEl = document.getElementById("kurserTabell");
