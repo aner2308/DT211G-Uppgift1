@@ -93,6 +93,7 @@ h1 {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
+    min-height: 80vh;
 }
 
 #container3 {
@@ -101,18 +102,26 @@ background-color: #333;
 
 table {
     width: 100%;
+    margin: 0;
     font-size: 1.4em;
+    border-collapse: collapse;
 }
 
 thead td {
     cursor: pointer;
+    text-decoration: underline;
     font-size: 1.2em;
     font-weight: bold;
     padding-bottom: 10px;
 }
 
 thead td:hover {
-color: rgb(184, 0, 0);
+color: rgb(0, 0, 0);
+}
+
+tr {
+    font-size: 1.2em;
+    border-bottom: 1px solid black;
 }
 
 /*För bilderna på bildsidan*/
@@ -144,15 +153,17 @@ ul {
 }
 
 #searchbar {
-    width: 80%;
-    height: 20px;
+    width: 100%;
+    height: 30px;
+    font-size: 1.6em;
+    padding-left: 10px;
+    margin: 0;
     margin-bottom: 20px;
 }
 
 footer {
     background-color: #333;
     min-height: 20vh;
-    width: 100vw;
 }
 
 footer p {
