@@ -214,6 +214,18 @@ footer a {
         width: 80vw;
         font-size: 0.8em;
     }
+
+    #container2 {
+        width: 90vw;
+    }
+
+    thead td {
+        font-size: 1em;
+    }
+    
+    tr {
+        font-size: 1em;        
+    }
     
 
 }
@@ -236,5 +248,13 @@ footer a {
         flex: 100%;
         max-width: 98%;
         padding: 0 1%;
+    }
+
+    thead td {
+        font-size: 0.8em;
+    }
+    
+    tr {
+        font-size: 0.8em;        
     }
 }
