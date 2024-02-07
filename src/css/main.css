@@ -95,8 +95,24 @@ h1 {
     margin-right: auto;
 }
 
+#container3 {
+background-color: #333;
+}
+
 table {
     width: 100%;
+    font-size: 1.4em;
+}
+
+thead td {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+thead td:hover {
+color: rgb(184, 0, 0);
 }
 
 /*För bilderna på bildsidan*/
@@ -125,6 +141,12 @@ table {
 ul {
     font-size: 1.6em;
     line-height: 1.6em;
+}
+
+#searchbar {
+    width: 80%;
+    height: 20px;
+    margin-bottom: 20px;
 }
 
 footer {

@@ -28,22 +28,62 @@ function toggleMenu() {
 const url = ("../ramschema_ht23.json");
 window.onload = init();
 
-//Sorteringar via event handlers
-const kodEl = document.getElementById("kurskod")
-kodEl.addEventListener("click", sortByCode)
+let kurser = [];
+const kurserEl = document.getElementById("kurserTabell");
 
-const namnEl = document.getElementById("kursnamn")
-namnEl.addEventListener("click", sortByName)
+//Kopplar sökrutan till event listener
+//Event listenern jämför texten i sökrutan mot texterna i tabellen, och visar dom som matchar.
+const searchbarEl = document.getElementById("searchbar");
+searchbarEl.addEventListener("keyup", (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredSearch = kurser.filter(kurs => {
+        return kurs.code.toLowerCase().includes(searchString) || kurs.coursename.toLowerCase().includes(searchString)
+    });
+    kurserEl.innerHTML = "";
+    displayCourses(filteredSearch);
+});
 
-const progressionEl = document.getElementById("progression")
-progressionEl.addEventListener("click", sortByProgress)
 
 
 async function init() {
     try {
         //Fetch-anrop
         const response = await fetch(url);
-        let kurser = await response.json();
+        kurser = await response.json();
+
+        //Hämtar in den tomma tabellen
+        const kurserEl = document.getElementById("kurserTabell");
+
+        //Sorteringar via event handlers
+        const kodEl = document.getElementById("kurskod")
+        kodEl.addEventListener("click", sortByCode)
+
+        const namnEl = document.getElementById("kursnamn")
+        namnEl.addEventListener("click", sortByName)
+
+        const progressionEl = document.getElementById("progression")
+        progressionEl.addEventListener("click", sortByProgress)
+
+        //Funktion för att sortera på kurskod
+        function sortByCode() {
+            kurser.sort((a, b) => (a.code > b.code) ? 1 : -1);
+            kurserEl.innerHTML = "";
+            displayCourses(kurser);
+        }
+
+        //Funktion för att sortera på kursnamn
+        function sortByName() {
+            kurser.sort((a, b) => (a.coursename > b.coursename) ? 1 : -1);
+            kurserEl.innerHTML = "";
+            displayCourses(kurser);
+        }
+
+        //Funktion för att sortera på progression
+        function sortByProgress() {
+            kurser.sort((a, b) => (a.progression > b.progression) ? 1 : -1);
+            kurserEl.innerHTML = "";
+            displayCourses(kurser);
+        }
 
         //Loggar för kontroll
         console.table(kurser);
@@ -71,14 +111,4 @@ function displayCourses(kurser) {
     });
 }
 
-function sortByCode() {
-    console.log("Du vill sortera på kod")
-}
 
-function sortByName() {
-    console.log("Du vill sortera på namn")
-}
-
-function sortByProgress() {
-    console.log("Du vill sortera på progression")
-}
