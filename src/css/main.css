@@ -95,6 +95,10 @@ h1 {
     margin-right: auto;
 }
 
+table {
+    width: 100%;
+}
+
 /*För bilderna på bildsidan*/
 .row {
     display: flex;

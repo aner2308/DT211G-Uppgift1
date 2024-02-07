@@ -28,13 +28,57 @@ function toggleMenu() {
 const url = ("../ramschema_ht23.json");
 window.onload = init();
 
-async function init(){
+//Sorteringar via event handlers
+const kodEl = document.getElementById("kurskod")
+kodEl.addEventListener("click", sortByCode)
+
+const namnEl = document.getElementById("kursnamn")
+namnEl.addEventListener("click", sortByName)
+
+const progressionEl = document.getElementById("progression")
+progressionEl.addEventListener("click", sortByProgress)
+
+
+async function init() {
     try {
+        //Fetch-anrop
         const response = await fetch(url);
         let kurser = await response.json();
 
+        //Loggar för kontroll
         console.table(kurser);
+
+        displayCourses(kurser);
     } catch {
+        //Felmeddelande om något inte stämmer
         document.getElementById("error").innerHTML = "<p>Något gick fel...</p>"
     }
+}
+
+function displayCourses(kurser) {
+
+    //Hämtar in den tomma tabellen
+    const kurserEl = document.getElementById("kurserTabell");
+
+    //Lägger in alla kurser i den tomma tabellen genom en forEach loop
+    kurser.forEach((kurs) => {
+        kurserEl.innerHTML += `
+        <tr>
+            <td>${kurs.code}</td>
+            <td>${kurs.coursename}</td>
+            <td>${kurs.progression}</td>
+        </tr>`;
+    });
+}
+
+function sortByCode() {
+    console.log("Du vill sortera på kod")
+}
+
+function sortByName() {
+    console.log("Du vill sortera på namn")
+}
+
+function sortByProgress() {
+    console.log("Du vill sortera på progression")
 }
